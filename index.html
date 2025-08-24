@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>koteykaz</title>
+  <title>k</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     body {
@@ -49,6 +49,26 @@
       transform: scale(1.05);
     }
   </style>
+  <script>
+    // Массив с последовательностью для титла
+    const titles = [
+      "k", "ko", "kot", "kote", "kotey", "koteyk", "koteyka", "koteykaz",
+      "koteyka", "koteyk", "kotey", "kote", "kot", "ko"
+    ];
+
+    let index = 0;
+
+    // Функция, которая меняет титл
+    function changeTitle() {
+      document.title = titles[index];
+      index = (index + 1) % titles.length; // Цикл
+    }
+
+    // Запуск функции каждые 500 мс после загрузки страницы
+    window.addEventListener('DOMContentLoaded', () => {
+      setInterval(changeTitle, 500);
+    });
+  </script>
 </head>
 <body>
   <img src="koteykaz.jpg" alt="avatar" class="avatar">
