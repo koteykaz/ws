@@ -4,12 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>k</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Подключение шрифтов Hack -->
   <style>
+    @font-face {
+      font-family: 'Hack';
+      src: url('./fonts/Hack-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Hack';
+      src: url('./fonts/Hack-Bold.woff2') format('woff2');
+      font-weight: 700;
+      font-style: normal;
+    }
+
     body {
       background: #0d0d0d;
       color: #e0e0e0;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Hack', monospace;
       text-align: center;
       padding: 2rem;
     }
@@ -23,7 +38,7 @@
     }
 
     h1 {
-      font-weight: 800;
+      font-weight: 700;
       font-size: 1.8rem;
       margin-bottom: 1.5rem;
       color: #ffffff;
@@ -38,7 +53,7 @@
       background: #ff9800;
       text-decoration: none;
       font-size: 0.9rem;
-      font-weight: 600;
+      font-weight: 700;
       border-radius: 0.5rem;
       box-shadow: 0 0 10px rgba(255, 152, 0, 0.6);
       transition: box-shadow 0.3s, transform 0.2s;
@@ -49,22 +64,19 @@
       transform: scale(1.05);
     }
   </style>
+
   <script>
-    // Массив с последовательностью для титла
     const titles = [
       "k", "ko", "kot", "kote", "kotey", "koteyk", "koteyka", "koteykaz",
       "koteyka", "koteyk", "kotey", "kote", "kot", "ko"
     ];
-
     let index = 0;
 
-    // Функция, которая меняет титл
     function changeTitle() {
       document.title = titles[index];
-      index = (index + 1) % titles.length; // Цикл
+      index = (index + 1) % titles.length;
     }
 
-    // Запуск функции каждые 500 мс после загрузки страницы
     window.addEventListener('DOMContentLoaded', () => {
       setInterval(changeTitle, 500);
     });
